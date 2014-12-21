@@ -1,0 +1,113 @@
+Shiny App Presentation
+========================================================
+author: OrKay
+date: `r format(Sys.Date(), format="%B %d %Y")`
+transition: rotate
+
+Presentation of Shiny Application Course Project
+=================================================
+
+## Synopsis
+
+This project work involves developing a shiny application which accepts US state
+as input from the user, filters the dataset **state.x77** and presents the facts
+about the selected state from the filtered dataset.
+
+It fullfills the following requirements: 
+
+1. It uses selectInput widget to let the user input/select a state.
+2. The sever.R code utilizes the selected state to filter dataset.
+3. The server returns the filtered dataset and ui.R contains the code to display the results.
+4. The work includes the documentation describing the application.
+
+- server.R
+- ui.R
+- README.RMD, README.MD and README.html
+
+2 Data Processing
+==================
+
+The dataset **state.x77** that comes with R is used to build this shiny app.
+
+```{r}
+summary(state.x77)
+```
+
+3 Slide With Plot
+========================
+
+```{r, echo=FALSE}
+plot(state.x77, main="Relationship Between Population and Income")
+```
+
+4 How does the Shiny App work
+==============================
+
+
+This Shiny App provides list of states in the drop down, 
+allowing user to select a state and click submit button to get the facts 
+related to the selected state. Once user clicks the submit button, the data 
+from the **state.x77** dataset will be filtered and displayed in the UI.
+
+
+5 ui.R Code
+===========
+
+### This is ui.R code
+
+```{r}
+
+library(shiny)     
+shinyUI(
+        pageWithSidebar(
+                # Application title
+                headerPanel("US State Facts and Figures"),
+                sidebarPanel(
+                        uiOutput("choose_state"),
+                        submitButton('Submit')
+                ),
+                mainPanel(                        
+                        h3('You entered'),
+                        verbatimTextOutput("inputValue"),
+                        h3('Facts of US state '),
+                        h3(textOutput("selected.state")),
+                        tableOutput("state.facts")
+                )
+        )
+)
+
+```
+
+6 server.R Code
+================
+
+### This is server.R code
+
+```{r}
+library(datasets)
+
+shinyServer(
+        function(input, output) {
+                
+                # Drop-down selection box for which data set
+                output$choose_state <- renderUI({
+                        selectInput("state.names", "Select US State", as.list(row.names(state.x77)))
+                })
+                
+                output$inputValue <- renderPrint({input$state.names})
+                output$selected.state <- renderPrint({input$state.names})
+                output$state.facts <- renderTable({
+                        # If missing input, return to avoid error later in function
+                        if(is.null(input$state.names))
+                                return()
+                        as.data.frame(state.x77[input$state.names,])
+                })
+
+        }
+)
+```
+
+7 Shiny App UI
+==============
+
+![Shiny App UI](ShinyAppUi.png)
