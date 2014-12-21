@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5948/ -->
+<html class=""><div id="coFrameDiv" style="height:0px;display:none;"><iframe id="coToolbarFrame" src="./US State Facts and Figures_files/placeholder.html" style="height:0px;width:100%;display:none;"></iframe></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <script type="application/shiny-singletons"></script>
+  <script type="application/html-dependencies">json2[2014.02.04];jquery[1.11.0];shiny[0.10.2.2];bootstrap[2.3.2];bootstrap-responsive[2.3.2]</script>
+<script src="./US State Facts and Figures_files/json2-min.js"></script>
+<script src="./US State Facts and Figures_files/jquery.js"></script>
+<link href="http://127.0.0.1:5948/shared/shiny.css" rel="stylesheet">
+<script src="./US State Facts and Figures_files/shiny.js"></script>
+<link href="http://127.0.0.1:5948/shared/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="./US State Facts and Figures_files/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="http://127.0.0.1:5948/shared/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+  <title>US State Facts and Figures</title>
+<link rel="stylesheet" id="coToolbarStyle" href="chrome-extension://mkfokfffehpeedafpekjeddnmnjhmcmk/toolbar/styles/placeholder.css" type="text/css"><script type="text/javascript" id="cosymantecbfw_removeToolbar">(function () {				var toolbarElement = {},					parent = {},					interval = 0,					retryCount = 0,					isRemoved = false;				if (window.location.protocol === 'file:') {					interval = window.setInterval(function () {						toolbarElement = document.getElementById('coFrameDiv');						if (toolbarElement) {							parent = toolbarElement.parentNode;							if (parent) {								parent.removeChild(toolbarElement);								isRemoved = true;								if (document.body && document.body.style) {									document.body.style.setProperty('margin-top', '0px', 'important');								}							}						}						retryCount += 1;						if (retryCount > 10 || isRemoved) {							window.clearInterval(interval);						}					}, 10);				}			})();</script><script type="text/javascript" id="waxCS">var WAX = function () { var _arrInputs; return { getElement: function (i) { return _arrInputs[i]; }, setElement: function(i){ _arrInputs=i; } } }(); function waxGetElement(i) { return WAX.getElement(i); } function coSetPageData(t, d){ if('wax'==t) { WAX.setElement(d);} }</script><link rel="stylesheet" type="text/css" href="./US State Facts and Figures_files/selectize.bootstrap2.css"><script src="./US State Facts and Figures_files/selectize.min.js"></script></head>
+<body>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12" style="padding: 10px 0px;">
+      <h1>US State Facts and Figures</h1>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span4">
+      <form class="well">
+        <div id="choose_state" class="shiny-html-output shiny-bound-output"><label class="control-label" for="state.names">Select US State</label>
+<select id="state.names" tabindex="-1" class="selectized shiny-bound-input" style="display: none;"><option value="Arizona" selected="selected"></option></select><div class="selectize-control single"><div class="selectize-input items has-options full has-items"><div data-value="Arizona" class="item">Arizona</div><input type="text" autocomplete="off" tabindex="" style="width: 4px; opacity: 0; position: absolute; left: -10000px;"></div><div class="selectize-dropdown single" style="display: none; width: 220px; top: 37px; left: 0px; visibility: visible;"><div class="selectize-dropdown-content"><div data-value="Alabama" data-selectable="" class="option">Alabama</div><div data-value="Alaska" data-selectable="" class="option">Alaska</div><div data-value="Arizona" data-selectable="" class="option selected">Arizona</div><div data-value="Arkansas" data-selectable="" class="option">Arkansas</div><div data-value="California" data-selectable="" class="option">California</div><div data-value="Colorado" data-selectable="" class="option">Colorado</div><div data-value="Connecticut" data-selectable="" class="option">Connecticut</div><div data-value="Delaware" data-selectable="" class="option">Delaware</div><div data-value="Florida" data-selectable="" class="option">Florida</div><div data-value="Georgia" data-selectable="" class="option">Georgia</div><div data-value="Hawaii" data-selectable="" class="option">Hawaii</div><div data-value="Idaho" data-selectable="" class="option">Idaho</div><div data-value="Illinois" data-selectable="" class="option">Illinois</div><div data-value="Indiana" data-selectable="" class="option">Indiana</div><div data-value="Iowa" data-selectable="" class="option">Iowa</div><div data-value="Kansas" data-selectable="" class="option">Kansas</div><div data-value="Kentucky" data-selectable="" class="option">Kentucky</div><div data-value="Louisiana" data-selectable="" class="option">Louisiana</div><div data-value="Maine" data-selectable="" class="option">Maine</div><div data-value="Maryland" data-selectable="" class="option">Maryland</div><div data-value="Massachusetts" data-selectable="" class="option">Massachusetts</div><div data-value="Michigan" data-selectable="" class="option">Michigan</div><div data-value="Minnesota" data-selectable="" class="option">Minnesota</div><div data-value="Mississippi" data-selectable="" class="option">Mississippi</div><div data-value="Missouri" data-selectable="" class="option">Missouri</div><div data-value="Montana" data-selectable="" class="option">Montana</div><div data-value="Nebraska" data-selectable="" class="option">Nebraska</div><div data-value="Nevada" data-selectable="" class="option">Nevada</div><div data-value="New Hampshire" data-selectable="" class="option">New Hampshire</div><div data-value="New Jersey" data-selectable="" class="option">New Jersey</div><div data-value="New Mexico" data-selectable="" class="option">New Mexico</div><div data-value="New York" data-selectable="" class="option">New York</div><div data-value="North Carolina" data-selectable="" class="option">North Carolina</div><div data-value="North Dakota" data-selectable="" class="option">North Dakota</div><div data-value="Ohio" data-selectable="" class="option">Ohio</div><div data-value="Oklahoma" data-selectable="" class="option">Oklahoma</div><div data-value="Oregon" data-selectable="" class="option">Oregon</div><div data-value="Pennsylvania" data-selectable="" class="option">Pennsylvania</div><div data-value="Rhode Island" data-selectable="" class="option">Rhode Island</div><div data-value="South Carolina" data-selectable="" class="option">South Carolina</div><div data-value="South Dakota" data-selectable="" class="option">South Dakota</div><div data-value="Tennessee" data-selectable="" class="option">Tennessee</div><div data-value="Texas" data-selectable="" class="option">Texas</div><div data-value="Utah" data-selectable="" class="option">Utah</div><div data-value="Vermont" data-selectable="" class="option">Vermont</div><div data-value="Virginia" data-selectable="" class="option">Virginia</div><div data-value="Washington" data-selectable="" class="option">Washington</div><div data-value="West Virginia" data-selectable="" class="option">West Virginia</div><div data-value="Wisconsin" data-selectable="" class="option">Wisconsin</div><div data-value="Wyoming" data-selectable="" class="option">Wyoming</div></div></div></div>
+<script type="application/json" data-for="state.names" data-nonempty="">{}</script></div>
+        <div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="span8">
+      <h3>You entered</h3>
+      <pre id="inputValue" class="shiny-text-output shiny-bound-output">[1] "Arizona"</pre>
+      <h3>Facts of US state </h3>
+      <h3>
+        <div id="selected.state" class="shiny-text-output shiny-bound-output">[1] "Arizona"</div>
+      </h3>
+      <div id="state.facts" class="shiny-html-output shiny-bound-output"><!-- html table generated in R 3.1.2 by xtable 1.7-4 package -->
+<!-- Sun Dec 21 04:30:22 2014 -->
+<table class="data table table-bordered table-condensed">
+<tbody><tr> <th>  </th> <th> state.x77[input$state.names, ] </th>  </tr>
+  <tr> <td align="right"> Population </td> <td align="right"> 2212.00 </td> </tr>
+  <tr> <td align="right"> Income </td> <td align="right"> 4530.00 </td> </tr>
+  <tr> <td align="right"> Illiteracy </td> <td align="right"> 1.80 </td> </tr>
+  <tr> <td align="right"> Life Exp </td> <td align="right"> 70.55 </td> </tr>
+  <tr> <td align="right"> Murder </td> <td align="right"> 7.80 </td> </tr>
+  <tr> <td align="right"> HS Grad </td> <td align="right"> 58.10 </td> </tr>
+  <tr> <td align="right"> Frost </td> <td align="right"> 15.00 </td> </tr>
+  <tr> <td align="right"> Area </td> <td align="right"> 113417.00 </td> </tr>
+   </tbody></table></div>
+    </div>
+  </div>
+</div>
+
+</body></html>
